@@ -66,9 +66,14 @@ app.post('/api/chat', async (req, res) => {
         });
 
         // Send the message and get response
-        const result = await chat.sendMessage(message);
-        const response = result.response;
-        const responseText = response.text();
+const result = await chat.sendMessage(message);
+
+let responseText = '';
+if (result.response && typeof result.response.text === 'function') {
+    responseText = result.response.text();
+} else {
+    responseText = result.response.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated';
+}
 
         res.json({
             success: true,
@@ -148,4 +153,5 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
 
