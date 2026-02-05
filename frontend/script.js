@@ -17,7 +17,7 @@ class ThunderGPT {
             return 'http://localhost:3000';
         }
         // Production backend URL (update this to your Render service URL after deployment)
-        return 'https://thunder-gpt-backend.onrender.com';
+        return 'https://thunder-gpt.onrender.com';
     }
 
     initializeElements() {
@@ -329,3 +329,4 @@ class ThunderGPT {
 document.addEventListener('DOMContentLoaded', () => {
     new ThunderGPT();
 });
+
