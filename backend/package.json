@@ -1,0 +1,27 @@
+{
+  "name": "thunder-gpt-backend",
+  "version": "1.0.0",
+  "description": "Thunder GPT - AI Chatbot Backend with Gemini API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "chatbot",
+    "gemini",
+    "ai",
+    "thunder-gpt"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "@google/generative-ai": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

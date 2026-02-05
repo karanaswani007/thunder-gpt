@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: thunder-gpt-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GEMINI_API_KEY
+        scope: build,runtime
+        description: "Your Gemini API Key from https://makersuite.google.com/app/apikey"

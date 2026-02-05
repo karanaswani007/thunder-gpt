@@ -1,0 +1,6 @@
+// Vercel deployment configuration for frontend
+export default async function handler(req, res) {
+  // This file is not needed as Vercel auto-detects static sites
+  // Just deploy the frontend folder directly to Vercel
+}
+// Deploy frontend with: cd frontend && vercel deploy
