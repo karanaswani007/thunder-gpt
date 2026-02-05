@@ -40,7 +40,7 @@ app.post('/api/chat', async (req, res) => {
 
         // Initialize Gemini with backend API key
         const genAI = initializeGemini();
-        const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
         // Build conversation history for context
         const conversationHistory = [];
@@ -148,3 +148,4 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
